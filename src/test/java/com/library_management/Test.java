@@ -18,4 +18,9 @@ public class Test {
         int result = 10 * 10;
         assertEquals(100,result);
     }
+    @org.junit.jupiter.api.Test
+    void divide(){
+        int result = 4 / 2;
+        assertEquals(2,result);
+    }
 }
