@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001_idCard
+      author: Sorl Vichika
+      comment: Alter the column of idCard
+      created: 29 Dec 2025
+      changes:
+        - addColumn:
+            tableName: registers
+            columns:
+              - column:
+                  name: id_card
+                  type: varchar(255)

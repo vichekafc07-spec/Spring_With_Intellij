@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002_student_classroom
+      author: admin
+      created: 19 dec 2025
+      comment: Create the student Classroom details
+      changes:
+        - createTable:
+            tableName: students
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: register_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_students_register
+                    references: registers(id)
+              - column:
+                  name: classroom_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_students_classroom
+                    references: classrooms(id)
