@@ -8,4 +8,10 @@ public class Test {
         int result = 2 + 3;
         assertEquals(5, result);
     }
+
+    @org.junit.jupiter.api.Test
+    void minus(){
+        int result = 10 -9;
+        assertEquals(1,result);
+    }
 }
